@@ -26,9 +26,9 @@ modules: [
 ```
 
 ### 5th step
-create a folder 'database'
-download the application `db browser for sqlite`
-[here](https://sqlitebrowser.org/)
+create a folder with the name 'database' inside your project
+
+download the application `db browser for sqlite` [here](https://sqlitebrowser.org/)
 
 open the application and create a new database and save it inside the `database` folder with the name `db.sqlite`
 
@@ -40,7 +40,7 @@ then write changes to the database and close the application
 
 
 ### 6th step
-create a folder `models` and a file `users.js` inside the folder with the following code
+create a folder `models` inside your project and add a file with the name `users.js` and the following code
 ````
 function users(db){
     this.db = db;
@@ -62,7 +62,7 @@ module.exports = users;
 
 
 ### 7th step
-create a folder `api` and inside that folder a file named `index.js` with the following contents
+create a folder `api` inside your project and inside that folder add a file named `index.js` with the following contents
 ````
 const bodyParser = require('body-parser')
 const app = require('express')()
