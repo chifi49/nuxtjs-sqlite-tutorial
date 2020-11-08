@@ -1,24 +1,28 @@
-# nuxt-sqlite-example
-<<<<<<< HEAD
+# Installation
+### 1st step
 
-## Build Setup
+create a nuxt app
+`npm create nuxt-app <project-name>`
+e.x.
+`npm create nuxt-app nuxtjs-sqlite-tutorial`
 
-```bash
-# install dependencies
-$ npm install
+### 2nd step
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+move to project
+`cd nuxtjs-sqlite-tutorial`
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+### 3rd step
+install packages `sqlite3` and `@nuxtp/http`
 
-# generate static project
-$ npm run generate
+`npm install --save sqlite3 @nuxt/http`
+
+### 4th step
+enable nuxt/http in nuxt.config.js
+
+```
+modules:[
+    '@nuxt/http'
+]
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-=======
-nuxtjs with access to sqlite via api route
->>>>>>> 4278cd011ebb48857e88edec2b2488c4f8870055
+

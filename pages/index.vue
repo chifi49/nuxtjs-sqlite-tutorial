@@ -1,34 +1,25 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <h1 class="title">
-        nuxt-sqlite-example
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <ul>
+        <li v-for="user in users">
+          {{user.id}} - {{user.name}}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData(context){
+    const data = await context.$http.$get('/api/users');
+    console.log(data);
+    return {
+      users: data.users
+    }
+  }
+}
 </script>
 
 <style>
