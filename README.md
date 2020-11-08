@@ -29,10 +29,15 @@ modules: [
 create a folder 'database'
 download the application `db browser for sqlite`
 [here](https://sqlitebrowser.org/)
+
 open the application and create a new database and save it inside the `database` folder with the name `db.sqlite`
+
 while you still have the application open, create a table `users` and add to 2 columns: `id` as primary key auto increment and `name` as text type
+
 browse the table `users` and enter some data
+
 then write changes to the database and close the application
+
 
 ### 6th step
 create a folder `models` and a file `users.js` inside the folder with the following code
