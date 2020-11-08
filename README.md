@@ -25,17 +25,17 @@ modules: [
 ]
 ```
 
-#### 5th step
+### 5th step
 create a folder 'database'
-download `db browser for sqlite`
+download the application `db browser for sqlite`
 [here](https://sqlitebrowser.org/)
-open the application and create a new database and save it inside the 'database' folder with name `db.sqlite`
-create a table `users` and add to 2 fields `id` as primary key auto increment and `name` as text type
+open the application and create a new database and save it inside the `database` folder with the name `db.sqlite`
+while you still have the application open, create a table `users` and add to 2 columns: `id` as primary key auto increment and `name` as text type
 browse the table `users` and enter some data
-then write changes and close the application
+then write changes to the database and close the application
 
-#### 6th step
-create a folder `models` and a file `users.js` with the following code
+## 6th step
+create a folder `models` and a file `users.js` inside the folder with the following code
 ````
 function users(db){
     this.db = db;
@@ -57,7 +57,7 @@ module.exports = users;
 
 
 #### 7th step
-create a folder `api` and a file `index.js` with the following contents
+create a folder `api` and inside that folder a file named `index.js` with the following contents
 ````
 const bodyParser = require('body-parser')
 const app = require('express')()
@@ -93,15 +93,26 @@ serverMiddleware:[
 ````
 
 #### 8th step
-If you open your application in http://localhost:3000/api/users you should see the response from the api
+If you open your application in http://localhost:3000/api/users you should see the response from your api with the content of the users table.
 If you want to include it an a vue page then load it from the method asyncData
 e.x
 ````
+<template>
+    <ul>
+        <li v-for="user in users">
+            {{user.id}} - {{user.name}}
+        </li>
+    </ul>
+</template>
+<script>
+export default{
 async asyncData(context){
     const data = await context.$http.$get('/api/users');
     return {
       users: data.users
     }
   }
+}
+</script>
 `````
 
