@@ -34,7 +34,7 @@ while you still have the application open, create a table `users` and add to 2 c
 browse the table `users` and enter some data
 then write changes to the database and close the application
 
-## 6th step
+### 6th step
 create a folder `models` and a file `users.js` inside the folder with the following code
 ````
 function users(db){
@@ -56,7 +56,7 @@ module.exports = users;
 ````
 
 
-#### 7th step
+### 7th step
 create a folder `api` and inside that folder a file named `index.js` with the following contents
 ````
 const bodyParser = require('body-parser')
@@ -92,7 +92,7 @@ serverMiddleware:[
   ]
 ````
 
-#### 8th step
+### 8th step
 If you open your application in http://localhost:3000/api/users you should see the response from your api with the content of the users table.
 If you want to include it an a vue page then load it from the method asyncData
 e.x
