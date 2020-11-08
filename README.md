@@ -1,4 +1,5 @@
 # nuxt-sqlite-example
+<<<<<<< HEAD
 
 ## Build Setup
 
@@ -18,3 +19,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+=======
+nuxtjs with access to sqlite via api route
+>>>>>>> 4278cd011ebb48857e88edec2b2488c4f8870055
